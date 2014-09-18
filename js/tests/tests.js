@@ -17,6 +17,10 @@ QUnit.test( "Test equality with checkBool()", function( assert ) {
 	result = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, false, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to false");
 
+	value  = "undefined";
+	result = plethoraUtils.checkBool(value);
+	assert.deepEqual( result, false, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to false");
+
 	value  = 0;
 	result = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, false, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to false");
