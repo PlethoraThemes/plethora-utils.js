@@ -11,144 +11,144 @@ QUnit.test( "Test equality with checkBool()", function( assert ) {
 
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = 0;
+	value    = 0;
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "1";
+	value    = "1";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "0";
+	value    = "0";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "true";
+	value    = "true";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "false";
+	value    = "false";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "TRUE";
+	value    = "TRUE";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "FALSE";
+	value    = "FALSE";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "True";
+	value    = "True";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "False";
+	value    = "False";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = true;
+	value    = true;
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = false;
+	value    = false;
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "On";
+	value    = "On";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "Off";
+	value    = "Off";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "ON";
+	value    = "ON";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "OFF";
+	value    = "OFF";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "on";
+	value    = "on";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "off";
+	value    = "off";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "YES";
+	value    = "YES";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "NO";
+	value    = "NO";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "Yes";
+	value    = "Yes";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "No";
+	value    = "No";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "yes";
+	value    = "yes";
 	expected = true;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "no";
+	value    = "no";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = undefined;
+	value    = undefined;
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = null;
+	value    = null;
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "undefined";
+	value    = "undefined";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = "randomstring";
+	value    = "randomstring";
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value  = Math.random();
+	value    = Math.random();
 	expected = false;
-	result = plethoraUtils.checkBool(value);
+	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
 });
