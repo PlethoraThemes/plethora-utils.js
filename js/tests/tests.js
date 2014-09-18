@@ -146,9 +146,14 @@ QUnit.test( "Test equality with checkBool()", function( assert ) {
 	result   = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
-	value    = Math.random();
+	value    = Math.floor(Math.random() * 1000);
+	expected = true;
+	result   = plethoraUtils.checkBool(value);
+	assert.deepEqual( result, expected, "Testing with positive number value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
+
+	value    = -Math.floor(Math.random() * 1000);
 	expected = false;
 	result   = plethoraUtils.checkBool(value);
-	assert.deepEqual( result, expected, "Testing with value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
+	assert.deepEqual( result, expected, "Testing with negative number value: " + value + " of type: " + typeof value + " which should evaluate to " + expected);
 
 });
