@@ -7,6 +7,7 @@ var plethoraUtils = plethoraUtils || {};
 
 /* READABLE VERSION 
 plethoraUtils.checkBool = function(val){
+	// Check if numeric value is greater than 0
 	val = (typeof val !=="number") ? val : (val>0) ? true : false;
 	return ({1:1,true:1,on:1,yes:1}[(val+"").toLowerCase()]) ? true : false;
 };
