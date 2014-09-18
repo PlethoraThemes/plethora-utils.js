@@ -5,5 +5,5 @@ var plethoraUtils = plethoraUtils || {};
  * "ON", "OFF", "On", "Off", to booleans
  */
  plethoraUtils.checkBool = function(val){
-	return ({1:1,true:1,on:1}[(val+"").toLowerCase()]) ? true : false;
+	return ({1:1,true:1,on:1,yes:1}[(val+"").toLowerCase()]) ? true : false;
 };
