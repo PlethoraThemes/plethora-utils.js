@@ -53,4 +53,28 @@ QUnit.test( "Test equality with checkBool()", function( assert ) {
 	result = plethoraUtils.checkBool(value);
 	assert.deepEqual( result, false, "Testing with value: " + value + " of type: " + typeof value);
 
+	value  = "On";
+	result = plethoraUtils.checkBool(value);
+	assert.deepEqual( result, true, "Testing with value: " + value + " of type: " + typeof value);
+
+	value  = "Off";
+	result = plethoraUtils.checkBool(value);
+	assert.deepEqual( result, false, "Testing with value: " + value + " of type: " + typeof value);
+
+	value  = "ON";
+	result = plethoraUtils.checkBool(value);
+	assert.deepEqual( result, true, "Testing with value: " + value + " of type: " + typeof value);
+
+	value  = "OFF";
+	result = plethoraUtils.checkBool(value);
+	assert.deepEqual( result, false, "Testing with value: " + value + " of type: " + typeof value);
+
+	value  = "on";
+	result = plethoraUtils.checkBool(value);
+	assert.deepEqual( result, true, "Testing with value: " + value + " of type: " + typeof value);
+
+	value  = "off";
+	result = plethoraUtils.checkBool(value);
+	assert.deepEqual( result, false, "Testing with value: " + value + " of type: " + typeof value);
+
 });

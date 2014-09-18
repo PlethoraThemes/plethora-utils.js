@@ -1,9 +1,9 @@
 var plethoraUtils = plethoraUtils || {};
 
 /*
- * Convert values: 1, 0, true, false, "1", "0", "true", "false", "TRUE", "FALSE", "True", "False" to booleans
+ * Convert values: 1, 0, true, false, "1", "0", "true", "false", "TRUE", "FALSE", "True", "False"
+ * "ON", "OFF", "On", "Off", to booleans
  */
  plethoraUtils.checkBool = function(val){
- 	val = val.toString().toLowerCase();
-	return ( val === "1" || val === "true" ) ? true : false;
+	return ({1:1,true:1,on:1}[(val+"").toLowerCase()]) ? true : false;
 };
