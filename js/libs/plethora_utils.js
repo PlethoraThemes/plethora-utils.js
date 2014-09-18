@@ -8,12 +8,11 @@ var plethoraUtils = plethoraUtils || {};
 /* READABLE VERSION 
 plethoraUtils.checkBool = function(val){
 	// Check if numeric value is greater than 0
-	val = (typeof val !=="number") ? val : (val>0) ? true : false;
+	val = (typeof val !=="number") ? val : (val>0);
 	return ({1:1,true:1,on:1,yes:1}[(val+"").toLowerCase()]) ? true : false;
 };
 */
 
 plethoraUtils.checkBool = function(val){
-	return ({1:1,true:1,on:1,yes:1}[(((typeof val !=="number")?val:(val>0)?true:false)+"").toLowerCase()])?true:false;
+	return ({1:1,true:1,on:1,yes:1}[(((typeof val !=="number")?val:(val>0))+"").toLowerCase()])?true:false;
 };
-
