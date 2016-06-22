@@ -54,26 +54,32 @@ _p.SVGMold  = function( type, options ){
 
 /*** COLORED CONSOLE LOG ***/
 
-_p.clog = function( msg ){
+_p.clog = function( msg ){ 
 
-  // TODO: CHECK IF IS CHROME WHERE CONSOLE CSS IS SUPPORTED: ( window.chrome )
+  var args = Array.prototype.slice.apply(arguments);
+  var ua   = window.navigator.userAgent;
+  var msie = ua.indexOf("MSIE");
 
-  var tag           = "clog";
-  var args          = [].slice.apply(arguments);
-  var currentScript = "";
+  // IE does not support console CSS styling
+  if ( msie < 0 || !ua.match(/Trident.*rv\:11\./) ) {
 
-  if ( document.currentScript ){
-    currentScript = document.currentScript.src.split('/');
-    currentScript = currentScript[currentScript.length-1].split("?")[0];
-    tag = currentScript;
+    var tag           = "clog";
+    var currentScript = "";
+
+    if ( document.currentScript ){ 
+      currentScript = document.currentScript.src.split('/');
+      currentScript = currentScript[currentScript.length-1].split("?")[0];
+      tag = currentScript;
+    } 
+
+    args.unshift(
+      '%c [ %s ]: %c',
+      'background: #222; color: #bada55',
+      tag,
+      'background: #222; color: #2ada45'
+    );
+
   }
-
-  args.unshift(
-    '%c [ %s ]: %c',
-    'background: #222; color: #bada55',
-    tag,
-    'background: #222; color: #2ada45'
-  );
 
   console.log.apply( console, args );
 

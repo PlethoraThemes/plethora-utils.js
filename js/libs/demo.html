@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test log</title>
+  <script type="text/javascript" src="plethora_utils.js"></script>
+  <script type="text/javascript">
+    var getMessageToLog = function(){
+      var msg=prompt("Enter message to log");
+      _p.clog(msg);
+    };
+  </script>
+</head>
+<body>
+  <button onclick="getMessageToLog()">Messge to log</button>
+</body>
+</html>
